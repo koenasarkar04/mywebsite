@@ -12,6 +12,8 @@ body{
     width:80%;
     margin:auto;
     overflow:hidden;
+    padding: 5.5px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 #main-header{
@@ -28,9 +30,9 @@ body{
 #navbar{
     background-color:#2b3953;
     color:#edb3e2;
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1; */
 }
 #navbar ul{
     display: flex;
@@ -171,12 +173,43 @@ body{
     justify-content:space-around;
     align-items:flex-start;
     flex-wrap:wrap;
+    gap: 5px;
 }
 .group-one .item-one img{
     box-shadow: -1px 0 8px rgb(177, 131, 139);
     border-radius: 10px;
 }
+.group-zero { /*flexbox*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
 
+.group-zero img {
+    max-width: 100%; /* Adjust width dynamically with padding space */
+    max-height: 100%; /* Ensures images scale down if they are too tall */
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    box-shadow: -1px 0 8px rgb(177, 131, 139);
+    border-radius: 10px;
+    position: relative;
+}
+/* When hovering over any image, blur all other images */
+.group-zero:hover img {
+    filter: blur(5px); 
+}
+/* Keep the hovered image clear */
+.group-zero img:hover {
+    max-width: 100%; /* Ensures images scale down if they are too wide */
+    max-height: 100%; /* Ensures images scale down if they are too tall */
+    object-fit: cover;
+    filter: none;
+    transform: scale(1.1); 
+    z-index: 10; 
+}
 #main-footer{
     text-align:center;
     font-weight:bold;
