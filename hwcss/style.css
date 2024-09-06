@@ -74,7 +74,6 @@ body{
     line-height:1.4em;
     text-align: center;
 }
-
 #main{
     float:left;
     width:70%;
@@ -93,7 +92,6 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
 }
-
 #genre a{
     text-decoration: none;
     font-weight: bolder;
@@ -297,48 +295,17 @@ body{
     color:#2b3953;
     font-size: 22px;
 }
-/*MEDIA TAGS*/
-
-@media(max-width:600px){ /*determines the display of the page when size reduced by scrolling*/
-    #main{
-        width:100%;
-        float:none;
-    }
-    #sidebar{
-        width:100%;
-        float:none;
-    }
-}
-@media(max-width:1231px) {
-    .group-one {
-        width:100%;
-        display:flex;
-        flex-wrap:wrap;
-    }
+.navbarmob{
+    display: none;
 }
 @media(max-width:748px){
-    .group-two{
-        width:100%;
-        display:flex;
-        flex-wrap:wrap;
-    }
-}
-
-@media (orientation:portrait) and (max-width:600px){ /*makes the bg of header area change when page is in portrait and max width is gvn*/
-    #main-header{
-        background-color:none;
-        background-image:url(../Images2/medialandscape.jpg);
-    }
-}
-@media(max-width:768px){
     .container{
         width:80%;
         margin: auto;
         overflow: hidden;
     }
     #navbar{
-        display: none;
-        background-image: url(../Images2/icon.jpg);
+        display:none;
     }
     #main{
         display: block;
@@ -347,6 +314,31 @@ body{
     #sidebar{
         display: block;
         width: 100%;
+    }
+    .pos{
+        display: none;
+    }
+    .navbarmob{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color:white;
+        min-height: 50px;
+    }
+    .navbarmob ul{
+        display: flex;
+        flex-wrap: nowrap;
+        list-style:none;
+        align-items: space-between;
+        padding-top:2px;
+        padding-bottom: 0px;
+    }
+    .navbarmob img{
+        padding-right: 20px;
+    }
+    #navbarmob img:active{
+        transform: scale(1.1);
     }
 
 }
