@@ -330,6 +330,26 @@ body{
         background-image:url(../Images2/medialandscape.jpg);
     }
 }
+@media(max-width:768px){
+    .container{
+        width:80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    #navbar{
+        display: none;
+        background-image: url(../Images2/icon.jpg);
+    }
+    #main{
+        display: block;
+        width: 100%;
+    }
+    #sidebar{
+        display: block;
+        width: 100%;
+    }
+
+}
 
 
 
